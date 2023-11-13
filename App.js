@@ -98,7 +98,8 @@ const ScreenComando = ({ navigation }) => {
   const [instruccion, setInstruccion] = useState('');
 
   const handleEnviar = () => {
-    fetch('http://172.20.25.41:3000/api/command', {
+    // num_ip es la ip de la maquina
+    fetch('http://num_ip:3000/api/command', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body:JSON.stringify(
