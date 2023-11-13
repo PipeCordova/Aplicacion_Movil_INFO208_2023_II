@@ -5,7 +5,8 @@ Para ejecutar la aplicación debe escribir en la consola: `npx expo start`
 Le saldrá un código QR en la pantalla el cual debe escanear con su celular desde la aplicación `Expo Go`
 
 # Bot 
-Debe clonar este repositorio: `https://github.com/faxio/bdd-ts-template.git`, y debe tenerlo corriendo aparte con el comando `npm run dev`. En el código `App.js` debe colocar su ip en la linea 102, donde dice num_ip. Esto se hace escribiendo en consola cmd `ipconfig` y debe copiar su Ipv4.  
+Debe clonar este repositorio: `https://github.com/faxio/bdd-ts-template.git`, y debe tenerlo corriendo aparte con el comando `npm run dev`.  
+En el código `App.js` debe colocar su ip en la linea 102, donde dice num_ip. Esto se hace escribiendo en consola cmd `ipconfig` y debe copiar su Ipv4.  
 
 
 # Fotos del diseño  
