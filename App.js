@@ -92,6 +92,40 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
+// Pantalla de comando
+const ScreenComando = ({ navigation }) => {
+  const [comando, setComando] = useState('');
+  const [instruccion, setInstruccion] = useState('');
+
+  const handleEnviar = () => {
+    fetch('http://172.20.25.41:3000/api/command', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body:JSON.stringify(
+          {"command":comando, "message":instruccion})
+        });
+        Alert.alert('Exito', 'mensaje enviado con exito', [{ text: 'OK' }]);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text>Ingrese sus comando</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="comando"
+        onChangeText={(text) => setComando(text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="instruccion"
+        onChangeText={(text) => setInstruccion(text)}
+      />
+      <Button title="Enviar a bot" onPress={handleEnviar} />
+      <StatusBar style="auto" />
+    </View>
+  );
+};
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -102,7 +136,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         {/* También puedes agregar una pantalla Main si aún no lo has hecho */}
-        {/* <Stack.Screen name="Main" component={MainScreen} /> */}
+        <Stack.Screen name="Main" component={ScreenComando} />
       </Stack.Navigator>
     </NavigationContainer>
   );
