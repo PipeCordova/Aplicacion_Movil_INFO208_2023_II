@@ -136,7 +136,6 @@ export default function App() {
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
-        {/* También puedes agregar una pantalla Main si aún no lo has hecho */}
         <Stack.Screen name="Main" component={ScreenComando} />
       </Stack.Navigator>
     </NavigationContainer>
